@@ -1,0 +1,6 @@
+groups:
+  - name: DemoAlerts
+    rules:
+      - alert: WebNotAvailable 
+        expr: probe_http_status_code{instance="http://192.168.2.161/"} == 0
+        for: 1s
